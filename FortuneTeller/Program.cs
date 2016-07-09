@@ -49,10 +49,32 @@ namespace FortuneTeller
 
             Console.WriteLine("Please enter the NUMBER OF SIBLINGS you have, and hit \"Enter\"");
             int userNumberOfSiblings = int.Parse(Console.ReadLine());
+            string userFutureLocation = "Cleveland";
+
+            if(userNumberOfSiblings == 0)
+            {
+                userFutureLocation = "Tokyo, Japan";
+            }
+            else if(userNumberOfSiblings == 1)
+            {
+                userFutureLocation = "London, England";
+            }
+            else if(userNumberOfSiblings == 2)
+            {
+                userFutureLocation = "Sidney, Australia";
+            }
+            else if(userNumberOfSiblings == 3)
+            {
+                userFutureLocation = "Miami, Florida";
+            }
+            else
+            {
+                userFutureLocation = "Shanghai, China";
+            }
 
            
 
-            Console.Write(userFirstName + " " + userLastName + " will retire in " + userAge + " years");
+            Console.Write(userFirstName + " " + userLastName + " will retire in " + userAge + " years, a vacation home in " + userFutureLocation);
 
             
             

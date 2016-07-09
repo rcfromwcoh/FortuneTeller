@@ -27,6 +27,19 @@ namespace FortuneTeller
             Console.WriteLine("Please enter your AGE and hit \"Enter\"");
             int userAge = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Please enter your BIRTH MONTH and hit \"Enter\"");
+            string userBirthMonth = Console.ReadLine();
+
+            Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"Help\" to get a list of the ROYGBIV colors.");
+            string roygbivValue = Console.ReadLine();
+
+            // put the switch case here 
+
+            Console.WriteLine("Please enter the NUMBER OF SIBLINGS you have, and hit \"Enter\"");
+            int userNumberOfSiblings = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("So far, we have the following information:\n" + userFirstName + "\n" + userLastName + "\n");
+
 
 
             //Console.WriteLine("Your first name is " + userFirstName + ", correct? If yes, type 'yes' and 'Enter'");

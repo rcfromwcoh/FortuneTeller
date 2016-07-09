@@ -27,6 +27,19 @@ namespace FortuneTeller
             Console.WriteLine("Please enter your AGE and hit \"Enter\"");
             int userAge = int.Parse(Console.ReadLine());
 
+            if (userAge % 2 == 0)
+            {
+                Console.WriteLine("Even!");
+            }
+            else if (userAge % 2 == 1)
+            {
+                Console.WriteLine("Odd!");
+            }
+            else
+            {
+                Console.WriteLine("You broke the mold!");
+
+            }
             Console.WriteLine("Please enter your BIRTH MONTH and hit \"Enter\"");
             string userBirthMonth = Console.ReadLine();
 
@@ -38,7 +51,7 @@ namespace FortuneTeller
             Console.WriteLine("Please enter the NUMBER OF SIBLINGS you have, and hit \"Enter\"");
             int userNumberOfSiblings = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("So far, we have the following information:\n" + userFirstName + "\n" + userLastName + "\n");
+            //Console.WriteLine("So far, we have the following information:\n" + userFirstName + "\n" + userLastName + "\n");
 
 
 

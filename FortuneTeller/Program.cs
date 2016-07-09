@@ -27,23 +27,15 @@ namespace FortuneTeller
 
             Console.WriteLine("Please enter your AGE and hit \"Enter\"");
             int userAge = int.Parse(Console.ReadLine());
-            //int retirementYears = 1;
-            if (userAge % 2 == 0)
-            {
-                //if the user's age is even, they will retire in 47 years
-                int yearsUntilRetirement = 47;
-                Console.WriteLine(yearsUntilRetirement);
-
-            }
-            else 
-            {
-                //if the user's age is odd, they will retire in 6 years
-                int retirementYearsChanged = 6;
-                Console.WriteLine(retirementYearsChanged);
-            }
+            //if the user's age is even, they will retire in 47 years
+            //if the user's age is odd, they will retire in 6 years
+            userAge = (userAge % 2 == 0) ? 47 : 6;
+            
             
             Console.WriteLine("Please enter your BIRTH MONTH and hit \"Enter\"");
             string userBirthMonth = Console.ReadLine();
+
+
 
             Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"Help\" to get a list of the ROYGBIV colors.");
             string roygbivValue = Console.ReadLine();
@@ -60,7 +52,7 @@ namespace FortuneTeller
 
            
 
-            Console.Write(userFirstName + " " + userLastName + " will retire in ");
+            Console.Write(userFirstName + " " + userLastName + " will retire in " + userAge + " years");
 
             
             

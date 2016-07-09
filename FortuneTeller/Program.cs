@@ -17,7 +17,7 @@ namespace FortuneTeller
             Console.ReadKey();
 
 
-            //Part 1
+            //Collect user data for part 1
 
             Console.WriteLine("Please enter your FIRST name and hit \"Enter\"");
             string userFirstName = Console.ReadLine();
@@ -27,9 +27,9 @@ namespace FortuneTeller
 
             Console.WriteLine("Please enter your AGE and hit \"Enter\"");
             int userAge = int.Parse(Console.ReadLine());
-            //if the user's age is even, they will retire in 47 years
+            //if the user's age is even, they will retire in 17 years
             //if the user's age is odd, they will retire in 6 years
-            userAge = (userAge % 2 == 0) ? 47 : 6;
+            userAge = (userAge % 2 == 0) ? 17 : 6;
             
             
             Console.WriteLine("Please enter your BIRTH MONTH and hit \"Enter\"");
@@ -39,13 +39,51 @@ namespace FortuneTeller
 
             Console.WriteLine("What is your favorite ROYGBIV color? If you do not know what ROYGBIV is, enter \"Help\" to get a list of the ROYGBIV colors.");
             string roygbivValue = Console.ReadLine();
-
-            if (roygbivValue == "R" || roygbivValue == "r")
+            roygbivValue = roygbivValue.ToUpper(); //changing user entered cast to upper so we could run switch case
+            if(roygbivValue == "HELP")
             {
-                Console.WriteLine("Red");
+                Console.WriteLine("ROYGBIV stands for \nR = Red\nO = Orange\nY = Yellow");
+                Console.WriteLine("G = Green\nB = Blue\nI = Indigo\nV = Violet");
+                Console.WriteLine("Please enter your favorite ROYGBIV color, and hit \"Enter\"");
+                roygbivValue = Convert.ToString(Console.ReadLine());
             }
+            string modeOfTransportation = "car";
 
-            // put the switch case here 
+            switch (roygbivValue)
+            {
+                case "R":
+                    modeOfTransportation = "Range Rover";
+                    break;
+
+                case "O":
+                    modeOfTransportation = "Outback SUV";
+                    break;
+
+                case "Y":
+                    modeOfTransportation = "Yacht";
+                    break;
+
+                case "G":
+                    modeOfTransportation = "Golf Cart";
+                    break;
+
+                case "B":
+                    modeOfTransportation = "Boat";
+                    break;
+
+                case "I":
+                    modeOfTransportation = "Intrepid";
+                    break;
+
+                case "V":
+                    modeOfTransportation = "Viper Convertible";
+                    break;
+
+                default:
+                    modeOfTransportation = "Jet Plane";
+                    break;
+            }
+          
 
             Console.WriteLine("Please enter the NUMBER OF SIBLINGS you have, and hit \"Enter\"");
             int userNumberOfSiblings = int.Parse(Console.ReadLine());
@@ -72,9 +110,10 @@ namespace FortuneTeller
                 userFutureLocation = "Shanghai, China";
             }
 
-           
 
-            Console.Write(userFirstName + " " + userLastName + " will retire in " + userAge + " years, a vacation home in " + userFutureLocation);
+
+            Console.Write(userFirstName + " " + userLastName + " will retire in " + userAge + " years,");
+            Console.Write(" a vacation home in " + userFutureLocation + " and a " + modeOfTransportation);
 
             
             
